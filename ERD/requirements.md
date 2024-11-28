@@ -3,7 +3,7 @@
 
 This document provides an overview of the Entity Relationship Diagram (ERD) for the Airbnb Clone backend. The ERD captures the relationships between the main entities, highlighting how data flows across users, properties, bookings, reviews, messages, and payments.
 
-![Airbnb Clone ERD](./ERD/entityRelation.png)
+![Airbnb Clone ERD](/ERD/entityRelation.png)
 
 ## Diagram Overview
 
