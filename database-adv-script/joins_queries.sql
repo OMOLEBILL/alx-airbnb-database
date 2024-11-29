@@ -19,9 +19,9 @@ SELECT
     Property.property_id,
     Property.name,
     Property.location,
-    Review.review_id,
-    Review.rating,
-    Review.comment
+    COALESCE(Review.review_id, 'No Review') AS review_id,
+    COALESCE(Review.rating, 0) AS rating,
+    COALESCE(Review.comment, 'No Comments') AS comment
 FROM 
     Property
 LEFT JOIN 
