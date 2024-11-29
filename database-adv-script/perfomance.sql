@@ -22,7 +22,10 @@ INNER JOIN
 INNER JOIN 
     Property ON Booking.property_id = Property.property_id
 LEFT JOIN 
-    Payment ON Booking.booking_id = Payment.booking_id;
+    Payment ON Booking.booking_id = Payment.booking_id
+WHERE 
+    Booking.status = 'confirmed'
+    AND Property.location = 'New York';
 
 -- Analyze Query Performance Using EXPLAIN
 EXPLAIN
@@ -49,7 +52,10 @@ INNER JOIN
 INNER JOIN 
     Property ON Booking.property_id = Property.property_id
 LEFT JOIN 
-    Payment ON Booking.booking_id = Payment.booking_id;
+    Payment ON Booking.booking_id = Payment.booking_id
+WHERE 
+    Booking.status = 'confirmed'
+    AND Property.location = 'New York';
 
 -- Refactored Query to Improve Performance
 SELECT 
@@ -75,7 +81,10 @@ INNER JOIN
 LEFT JOIN 
     Property ON Booking.property_id = Property.property_id
 LEFT JOIN 
-    Payment ON Booking.booking_id = Payment.booking_id;
+    Payment ON Booking.booking_id = Payment.booking_id
+WHERE 
+    Booking.status = 'confirmed'
+    AND Property.location = 'New York';
 
 -- Changes Made for Performance Improvement:
 -- 1. Changed INNER JOIN to LEFT JOIN for Property to prevent unnecessary exclusion of bookings without property details.
